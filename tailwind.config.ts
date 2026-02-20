@@ -19,6 +19,11 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        nav: "hsl(var(--nav-bg))",
+        whatsapp: "hsl(var(--whatsapp))",
+        "section-alt": "hsl(var(--section-bg-alt))",
+        "dsi-brown": "hsl(var(--dsi-brown))",
+        "dsi-olive": "hsl(var(--dsi-olive))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
