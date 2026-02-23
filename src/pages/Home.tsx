@@ -46,12 +46,12 @@ export default function Home() {
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section
         id="inicio"
-        className="relative w-full min-h-screen flex items-center justify-center overflow-hidden"
+        className="hero-bg relative w-full min-h-screen flex items-center justify-center overflow-hidden"
         style={{
           backgroundImage: `url(${heroLandscape})`,
           backgroundSize: "cover",
           backgroundPosition: "center 35%",
-          backgroundAttachment: "fixed",
+          backgroundAttachment: "scroll",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
@@ -89,33 +89,56 @@ export default function Home() {
       </section>
 
       {/* ── QUIÉNES SOMOS ────────────────────────────────────── */}
-      <section id="quienes-somos" className="py-24 bg-background">
+      <section id="quienes-somos" className="py-24 bg-background overflow-x-hidden">
         <div className="max-w-6xl mx-auto px-6">
           {/* Section label */}
-          <div className="flex items-center gap-4 mb-16">
+          <div className="flex items-center gap-4 mb-12 md:mb-16">
             <div className="w-8 h-px bg-primary" />
-            <span className="text-primary text-xs tracking-[0.3em] uppercase font-medium">Quiénes Somos</span>
+            <span className="text-primary text-xs tracking-[0.3em] uppercase font-medium">
+              Quiénes Somos
+            </span>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
             {/* Image collage */}
-            <div className="grid grid-cols-2 gap-3">
-              <div className="col-span-2 rounded-2xl overflow-hidden h-64 shadow-xl">
-                <img src={bosqueDesierto} alt="Dehesa San Isidro" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            <div className="min-w-0 grid grid-cols-2 gap-3">
+              <div className="col-span-2 rounded-2xl overflow-hidden h-64 md:h-72 shadow-xl">
+                <img
+                  src={bosqueDesierto}
+                  alt="Dehesa San Isidro"
+                  className="block w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <div className="rounded-2xl overflow-hidden h-44 shadow-md">
-                <img src={heroCacti} alt="Cactáceas" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+
+              <div className="rounded-2xl overflow-hidden h-44 md:h-48 shadow-md">
+                <img
+                  src={heroCacti}
+                  alt="Cactáceas"
+                  className="block w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <div className="rounded-2xl overflow-hidden h-44 shadow-md">
-                <img src={catalogoCacti} alt="Catálogo" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+
+              <div className="rounded-2xl overflow-hidden h-44 md:h-48 shadow-md">
+                <img
+                  src={catalogoCacti}
+                  alt="Catálogo"
+                  className="block w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </div>
 
             {/* Text */}
-            <div>
-              <h2 className="text-5xl font-raleway font-bold text-foreground mb-8 leading-tight">
+            <div className="min-w-0">
+              <h2 className="text-5xl font-raleway font-bold text-foreground mb-6 md:mb-8 leading-tight">
                 Comprometidos con la conservación
               </h2>
+
               <p className="text-muted-foreground leading-relaxed mb-8 text-justify">
                 Dehesa San Isidro es nuestra Unidad de Manejo para la Conservación de La Vida Silvestre (UMA),
                 buscamos promover la propagación y venta legal de especies de cactáceas catalogadas como
@@ -124,16 +147,22 @@ export default function Home() {
 
               <div className="space-y-8">
                 <div className="border-l-2 border-primary pl-6">
-                  <h3 className="text-xl font-raleway font-semibold text-foreground mb-2">Misión</h3>
+                  <h3 className="text-xl font-raleway font-semibold text-foreground mb-2">
+                    Misión
+                  </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    En DEHESA SAN ISIDRO conservamos y propagamos cactáceas mexicanas mediante prácticas sustentables y colaboraciones con sectores industrial, 
-                    educativo y científico; generamos productos y servicios que promueven la restauración del matorral xerófilo, la educación ambiental y el desarrollo local, contribuyendo al cumplimiento de los Objetivos de Desarrollo Sostenible.
+                    En DEHESA SAN ISIDRO conservamos y propagamos cactáceas mexicanas mediante prácticas sustentables y colaboraciones con sectores industrial,
+                    educativo y científico; generamos productos y servicios que promueven la restauración del matorral xerófilo, la educación ambiental y el desarrollo local,
+                    contribuyendo al cumplimiento de los Objetivos de Desarrollo Sostenible.
                   </p>
                 </div>
+
                 <div className="border-l-2 border-primary pl-6">
-                  <h3 className="text-xl font-raleway font-semibold text-foreground mb-2">Visión</h3>
+                  <h3 className="text-xl font-raleway font-semibold text-foreground mb-2">
+                    Visión
+                  </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Ser referente nacional en conservación y valorización del matorral xerófilo, reconocidos por nuestras alianzas multisectoriales, innovación 
+                    Ser referente nacional en conservación y valorización del matorral xerófilo, reconocidos por nuestras alianzas multisectoriales, innovación
                     en técnicas de cultivo y manejo, y por impulsar comunidades resilientes y una economía circular compatible con la protección de la biodiversidad en Guanajuato y México.
                   </p>
                 </div>
@@ -142,15 +171,18 @@ export default function Home() {
           </div>
 
           {/* UMA card */}
-          <div className="mt-20 bg-primary/5 border border-primary/20 rounded-2xl p-10">
+          <div className="mt-16 md:mt-20 bg-primary/5 border border-primary/20 rounded-2xl p-8 md:p-10">
             <div className="flex items-start gap-6 flex-wrap">
               <div className="flex-shrink-0">
                 <div className="w-16 h-16 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center">
                   <span className="font-serif font-bold text-primary text-lg">UMA</span>
                 </div>
               </div>
-              <div className="flex-1 min-w-xs">
-                <h3 className="text-xl font-raleway font-semibold text-foreground mb-3">¿Qué es una UMA?</h3>
+
+              <div className="flex-1 min-w-0">
+                <h3 className="text-xl font-raleway font-semibold text-foreground mb-3">
+                  ¿Qué es una UMA?
+                </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Las UMAs (Unidades de Manejo para la Conservación de la Vida Silvestre) son áreas autorizadas en México
                   donde se protege y aprovecha de forma sustentable la flora y fauna silvestre, buscando conservar los

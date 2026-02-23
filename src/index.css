@@ -6,6 +6,12 @@
 
 /* DSI - Dehesa San Isidro design system */
 
+@media (min-width: 768px) {
+  .hero-bg {
+    background-attachment: fixed;
+  }
+}
+
 @layer base {
   :root {
     --background: 60 15% 96%;
