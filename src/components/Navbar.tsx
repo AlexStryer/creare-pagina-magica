@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import dsiLogo from "@/assets/as.png";
 
 const navLinks = [
   { label: "Inicio", href: "#inicio" },
   { label: "Quiénes Somos", href: "#quienes-somos" },
   { label: "Sostenibilidad", href: "#sostenibilidad" },
+  { label: "Proyectos", href: "#proyectos" },
   { label: "Catálogo", href: "#catalogo" },
   { label: "Contacto", href: "#contacto" },
 ];
@@ -53,9 +55,13 @@ export default function Navbar() {
           onClick={() => scrollTo("#inicio")}
           className="flex items-center gap-3 shrink-0"
         >
-          <span className="font-serif text-2xl font-bold tracking-tight text-white leading-none">
-            DSI
-          </span>
+          <img
+            src={dsiLogo}
+            alt="DSI - Dehesa San Isidro"
+            className="h-8 sm:h-9 w-auto object-contain"
+            loading="eager"
+            decoding="async"
+          />
           <div className="w-px h-5 bg-white/30 hidden sm:block" />
           <span className="text-white/70 text-xs font-light tracking-[0.2em] uppercase hidden sm:block">
             Dehesa San Isidro

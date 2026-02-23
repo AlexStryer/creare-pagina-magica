@@ -6,6 +6,13 @@ import paisajismo from "@/assets/paisajismo.jpg";
 import regenerativo from "@/assets/regenerativo.jpg";
 import catalogoCacti from "@/assets/catalogo-cacti.jpg";
 import proyectoPrincipal from "@/assets/proyecto-principal.jpg";
+import dsiLogo from "@/assets/as.png";
+import dsiLogoAlt from "@/assets/as1.png";
+const catalogPdfUrl = `${import.meta.env.BASE_URL}catalogo.pdf`;
+import proyectoImg1 from "@/assets/proyectoImg1.jpg";
+import proyectoImg2 from "@/assets/proyectoImg2.jpg";
+import proyectoImg3 from "@/assets/proyectoImg3.jpg";
+import proyectoImg4 from "@/assets/proyectoImg4.jpg";
 
 const impactos = [
   {
@@ -26,7 +33,6 @@ const impactos = [
 ];
 
 const contactInfo = [
-  { label: "Sitio web", value: "dehesasanisidro.com" },
   { label: "Instagram", value: "@uma_dehesanisidro" },
   { label: "Email", value: "ventas@dehesasanisidro.com" },
   { label: "Teléfono", value: "55 4352 9753" },
@@ -49,16 +55,23 @@ export default function Home() {
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
+
         <div className="relative z-10 flex flex-col items-center text-center px-6">
-          <div className="border-2 border-white/70 rounded-full px-20 py-10 shadow-2xl backdrop-blur-sm bg-black/10 mb-8">
-            <p className="text-white/80 text-xs tracking-[0.4em] uppercase font-light mb-2">Dehesa San Isidro</p>
-            <h1 className="text-white text-8xl font-bold tracking-widest font-serif leading-none">DSI</h1>
-            <div className="w-12 h-px bg-white/60 mx-auto my-3" />
-            <p className="text-white/80 text-xs tracking-[0.3em] uppercase font-light">UMA Certificada · SEMARNAT</p>
+          {/* LOGO BADGE */}
+          <div className="mb-8 flex justify-center">
+            <img
+              src={dsiLogo}
+              alt="DSI - Dehesa San Isidro"
+              className="block w-full h-auto max-w-[520px] md:max-w-[680px] object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.35)]"
+              loading="eager"
+              decoding="async"
+            />   
           </div>
+
           <p className="text-white/90 text-xl font-light max-w-xl leading-relaxed">
             Conservación, propagación legal y venta responsable de cactáceas en peligro de extinción
           </p>
+
           <a
             href="#quienes-somos"
             className="mt-10 border border-white/60 text-white text-sm tracking-widest uppercase px-8 py-3 rounded-full hover:bg-white/20 transition-all duration-300"
@@ -72,6 +85,7 @@ export default function Home() {
           <div className="w-px h-12 bg-white/40" />
           <div className="w-1.5 h-1.5 rounded-full bg-white/60" />
         </div>
+      
       </section>
 
       {/* ── QUIÉNES SOMOS ────────────────────────────────────── */}
@@ -99,8 +113,8 @@ export default function Home() {
 
             {/* Text */}
             <div>
-              <h2 className="text-5xl font-serif font-bold text-foreground mb-8 leading-tight">
-                Una UMA comprometida con la naturaleza
+              <h2 className="text-5xl font-raleway font-bold text-foreground mb-8 leading-tight">
+                Comprometidos con la conservación
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8 text-justify">
                 Dehesa San Isidro es nuestra Unidad de Manejo para la Conservación de La Vida Silvestre (UMA),
@@ -110,17 +124,17 @@ export default function Home() {
 
               <div className="space-y-8">
                 <div className="border-l-2 border-primary pl-6">
-                  <h3 className="text-xl font-serif font-semibold text-foreground mb-2">Misión</h3>
+                  <h3 className="text-xl font-raleway font-semibold text-foreground mb-2">Misión</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Ser la principal UMA especializada en cactáceas amenazadas en México, promoviendo su propagación
-                    legal y venta responsable, contribuyendo a la conservación y generando beneficios económicos sostenibles.
+                    En DEHESA SAN ISIDRO conservamos y propagamos cactáceas mexicanas mediante prácticas sustentables y colaboraciones con sectores industrial, 
+                    educativo y científico; generamos productos y servicios que promueven la restauración del matorral xerófilo, la educación ambiental y el desarrollo local, contribuyendo al cumplimiento de los Objetivos de Desarrollo Sostenible.
                   </p>
                 </div>
                 <div className="border-l-2 border-primary pl-6">
-                  <h3 className="text-xl font-serif font-semibold text-foreground mb-2">Visión</h3>
+                  <h3 className="text-xl font-raleway font-semibold text-foreground mb-2">Visión</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Construir un modelo de producción sostenible en zonas áridas que sirva de referente nacional e internacional,
-                    demostrando que conservación y actividad económica pueden coexistir armónicamente.
+                    Ser referente nacional en conservación y valorización del matorral xerófilo, reconocidos por nuestras alianzas multisectoriales, innovación 
+                    en técnicas de cultivo y manejo, y por impulsar comunidades resilientes y una economía circular compatible con la protección de la biodiversidad en Guanajuato y México.
                   </p>
                 </div>
               </div>
@@ -136,7 +150,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex-1 min-w-xs">
-                <h3 className="text-xl font-serif font-semibold text-foreground mb-3">¿Qué es una UMA?</h3>
+                <h3 className="text-xl font-raleway font-semibold text-foreground mb-3">¿Qué es una UMA?</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Las UMAs (Unidades de Manejo para la Conservación de la Vida Silvestre) son áreas autorizadas en México
                   donde se protege y aprovecha de forma sustentable la flora y fauna silvestre, buscando conservar los
@@ -160,7 +174,7 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-dsi-olive/60" />
         <div className="relative z-10 h-full flex items-center justify-center">
-          <p className="text-white text-2xl font-serif italic font-light text-center px-6 max-w-2xl leading-relaxed">
+          <p className="text-white text-3xl font-serif italic font-light text-center px-6 max-w-2xl leading-relaxed">
             "Tenemos la convicción de desarrollar esquemas de producción sostenible, creando oportunidades en las zonas áridas."
           </p>
         </div>
@@ -174,7 +188,7 @@ export default function Home() {
             <span className="text-primary text-xs tracking-[0.3em] uppercase font-medium">Sostenibilidad</span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16 gap-4">
-            <h2 className="text-5xl font-serif font-bold text-foreground leading-tight">
+            <h2 className="text-5xl font-raleway font-bold text-foreground leading-tight">
               Nuestro<br />Impacto
             </h2>
             <p className="text-muted-foreground max-w-sm text-sm leading-relaxed">
@@ -196,7 +210,7 @@ export default function Home() {
                     0{i + 1}
                   </span>
                 </div>
-                <h3 className="text-lg font-serif font-bold text-foreground mb-3">{item.title}</h3>
+                <h3 className="text-lg font-raleway font-bold text-foreground mb-3">{item.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{item.text}</p>
               </div>
             ))}
@@ -204,78 +218,103 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── NUESTROS PROYECTOS ───────────────────────────────── */}
+      <section id="proyectos" className="pt-24 pb-12 bg-background">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex items-center gap-4 mb-4">
+            <div className="w-8 h-px bg-primary" />
+            <span className="text-primary text-xs tracking-[0.3em] uppercase font-medium">
+              Nuestros Proyectos
+            </span>
+          </div>
+
+          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10 mb-12">
+            <h2 className="text-5xl font-raleway font-bold text-foreground leading-tight max-w-xl">
+              Nuestros<br />Proyectos
+            </h2>
+
+            <p className="text-muted-foreground text-sm leading-relaxed max-w-2xl text-justify">
+              Como Unidad de Manejo para la Conservación de la Vida Silvestre en Guanajuato, nos hemos vinculado activamente con empresas del sector industrial, instituciones educativas y centros de investigación científica para desarrollar proyectos conjuntos alineados con los Objetivos de Desarrollo Sostenible; estas alianzas incluyen programas de restauración y reproducción ex situ de cactáceas mexicanas, transferencia de tecnología y buenas prácticas productivas a empresas para reducir impactos ambientales, formación técnica y curricula compartido con universidades y escuelas técnicas, y estudios científicos sobre genética, ecología y manejo del matorral xerófilo que orientan acciones de conservación in situ y políticas públicas locales; todo ello con un enfoque de economía circular, generación de empleo local y educación ambiental para asegurar la recuperación y la resiliencia del ecosistema del matorral xerófilo.
+            </p>
+          </div>
+
+          {/* Grid uniforme (todas del mismo tamaño) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[proyectoImg1, proyectoImg2, proyectoImg3, proyectoImg4].map((img, idx) => (
+              <div
+                key={idx}
+                className="rounded-2xl overflow-hidden border border-border shadow-md"
+              >
+                <img
+                  src={img}
+                  alt={`Proyecto ${idx + 1}`}
+                  className="w-full h-64 object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CATÁLOGO ─────────────────────────────────────────── */}
-      <section id="catalogo" className="py-24 bg-background">
+      <section id="catalogo" className="pt-12 pb-24 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-center gap-4 mb-4">
             <div className="w-8 h-px bg-primary" />
             <span className="text-primary text-xs tracking-[0.3em] uppercase font-medium">Catálogo</span>
           </div>
 
-          {/* Featured card */}
-          <div className="rounded-3xl overflow-hidden shadow-2xl bg-card border border-border mb-16">
+          {/* PDF URL (works on localhost + GitHub Pages base path) */}
+          {/*
+      Nota: asegúrate que tu PDF esté en /public/catalogo.pdf
+    */}
+          <a
+            href={`${import.meta.env.BASE_URL}catalogo.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block rounded-3xl overflow-hidden shadow-2xl bg-card border border-border transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-3xl focus:outline-none focus:ring-2 focus:ring-primary/40"
+            aria-label="Abrir catálogo mensual (PDF)"
+          >
             <div className="grid md:grid-cols-2">
               <div className="p-12 flex flex-col justify-between">
                 <div>
-                  <div className="border-2 border-foreground/30 rounded-full w-36 h-20 flex flex-col items-center justify-center mb-8">
-                    <span className="font-serif text-3xl font-bold text-foreground">DSI</span>
-                    <span className="text-xs tracking-widest uppercase text-muted-foreground">Dehesa San Isidro</span>
+                  <div className="mb-8">
+                    <img
+                      src={dsiLogoAlt}
+                      alt="DSI - Dehesa San Isidro"
+                      className="h-10 sm:h-12 w-auto object-contain"
+                      loading="eager"
+                      decoding="async"
+                    />
                   </div>
-                  <h2 className="text-5xl font-serif font-bold text-foreground leading-tight mb-4">
+
+                  <h2 className="text-5xl font-raleway font-bold text-foreground leading-tight mb-4">
                     Nuestro<br />Catálogo
                   </h2>
+
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Cactáceas propagadas legalmente bajo el respaldo de SEMARNAT. Especies únicas, origen ético garantizado.
+                    Haz clic para ver el catálogo en PDF.
                   </p>
                 </div>
+
                 <p className="text-xs tracking-[0.25em] uppercase text-muted-foreground/60 mt-8">
                   DEHESA SAN ISIDRO · 2026
                 </p>
               </div>
+
               <div className="h-80 md:h-auto overflow-hidden">
-                <img src={bosqueDesierto} alt="Catálogo DSI" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                <img
+                  src={bosqueDesierto}
+                  alt="Catálogo DSI"
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </div>
-          </div>
-
-          {/* Cards */}
-          <div className="grid sm:grid-cols-2 gap-8 mb-12">
-            <div className="group bg-card rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-lg transition-shadow duration-300">
-              <div className="h-52 overflow-hidden">
-                <img src={catalogoCacti} alt="Cactáceas" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              </div>
-              <div className="p-8">
-                <h3 className="text-xl font-serif font-bold text-foreground mb-3">Cactáceas Amenazadas</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Ofrecemos especies catalogadas como amenazadas, en protección especial o en peligro de extinción,
-                  propagadas legalmente en nuestra UMA certificada.
-                </p>
-              </div>
-            </div>
-            <div className="group bg-card rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-lg transition-shadow duration-300">
-              <div className="h-52 overflow-hidden">
-                <img src={heroCacti} alt="Propagación legal" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              </div>
-              <div className="p-8">
-                <h3 className="text-xl font-serif font-bold text-foreground mb-3">Propagación Legal</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Todas nuestras plantas cuentan con respaldo legal de SEMARNAT bajo el registro
-                  SEMARNAT-UMA-IN-0061-GTO, garantizando su origen ético y legal.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <a
-              href="https://wa.me/5543529753"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-4 rounded-full font-semibold text-base hover:brightness-110 transition-all shadow-lg hover:shadow-xl"
-            >
-              Solicitar Catálogo Completo
-            </a>
-          </div>
+          </a>
         </div>
       </section>
 
@@ -286,8 +325,8 @@ export default function Home() {
             <div className="w-8 h-px bg-primary" />
             <span className="text-primary text-xs tracking-[0.3em] uppercase font-medium">Contacto</span>
           </div>
-          <h2 className="text-5xl font-serif font-bold text-foreground mb-16 leading-tight">
-            Hablemos
+          <h2 className="text-5xl font-raleway font-bold text-foreground mb-16 leading-tight">
+            Escríbenos
           </h2>
 
           <div className="grid md:grid-cols-2 gap-16 items-start">
@@ -315,16 +354,14 @@ export default function Home() {
 
             {/* Logo + badge */}
             <div className="flex flex-col items-center text-center">
-              <div className="border-2 border-primary/40 rounded-full w-52 h-52 flex flex-col items-center justify-center shadow-xl bg-card mb-8">
-                <span className="font-serif text-7xl font-bold text-foreground leading-none">DSI</span>
-                <div className="w-16 h-px bg-primary/40 my-3" />
-                <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground">Dehesa San Isidro</span>
-              </div>
-              <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
-                Unidad de Manejo para la Conservación de la Vida Silvestre, certificada por SEMARNAT.
-              </p>
-              <div className="mt-6 px-5 py-2 border border-border rounded-full">
-                <span className="text-xs text-muted-foreground tracking-wide">SEMARNAT-UMA-IN-0061-GTO</span>
+              <div className="mb-8 flex justify-center">
+                <img
+                  src={dsiLogoAlt}
+                  alt="DSI - Dehesa San Isidro"
+                  className="w-full max-w-[320px] sm:max-w-[420px] md:max-w-[520px] h-auto object-contain drop-shadow-[0_18px_30px_rgba(0,0,0,0.18)]"
+                  loading="eager"
+                  decoding="async"
+                />
               </div>
             </div>
           </div>
@@ -333,7 +370,15 @@ export default function Home() {
 
       {/* ── FOOTER ───────────────────────────────────────────── */}
       <footer className="bg-foreground text-background/80 py-10 text-center">
-        <p className="font-serif text-3xl font-bold text-background mb-2">DSI</p>
+        <div className="mb-3 flex justify-center">
+          <img
+            src={dsiLogo}
+            alt="DSI - Dehesa San Isidro"
+            className="h-10 sm:h-12 w-auto object-contain"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
         <p className="text-xs tracking-widest uppercase opacity-60 mb-4">Dehesa San Isidro</p>
         <p className="text-xs opacity-40">© 2026 Dehesa San Isidro · Todos los derechos reservados</p>
       </footer>

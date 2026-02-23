@@ -2,6 +2,7 @@ import HeroBanner from "@/components/HeroBanner";
 import heroCacti from "@/assets/hero-cacti.jpg";
 import catalogoCacti from "@/assets/catalogo-cacti.jpg";
 import bosqueDesierto from "@/assets/bosque-desierto.jpg";
+import dsiLogo from "@/assets/as.png";
 
 export default function Catalogo() {
   return (
@@ -16,11 +17,19 @@ export default function Catalogo() {
               <div className="p-10 flex flex-col justify-between">
                 <div>
                   {/* DSI Logo text */}
-                  <div className="border-2 border-foreground rounded-full w-36 h-20 flex flex-col items-center justify-center mb-6">
-                    <span className="font-serif text-3xl font-bold text-foreground">DSI</span>
-                    <span className="text-xs tracking-widest uppercase text-muted-foreground">Dehesa San Isidro</span>
+                  <div className="border-2 border-foreground rounded-full w-36 h-20 flex flex-col items-center justify-center mb-6 px-3">
+                    <img
+                      src={dsiLogo}
+                      alt="DSI - Dehesa San Isidro"
+                      className="h-8 w-auto object-contain"
+                      loading="eager"
+                      decoding="async"
+                    />
+                    <span className="text-xs tracking-widest uppercase text-muted-foreground mt-1">
+                      Dehesa San Isidro
+                    </span>
                   </div>
-                  <h2 className="text-4xl font-serif font-bold text-foreground mb-2">
+                  <h2 className="text-4xl font-raleway font-bold text-foreground mb-2">
                     Nuestro<br />Catálogo
                   </h2>
                 </div>
@@ -42,7 +51,7 @@ export default function Catalogo() {
               <div className="h-40 rounded-md overflow-hidden mb-4">
                 <img src={catalogoCacti} alt="Cactáceas" className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-lg font-serif font-bold text-foreground mb-2">Cactáceas Amenazadas</h3>
+              <h3 className="text-lg font-raleway font-bold text-foreground mb-2">Cactáceas Amenazadas</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Ofrecemos especies catalogadas como amenazadas, en protección especial o en peligro
                 de extinción, propagadas legalmente en nuestra UMA certificada.
@@ -52,7 +61,7 @@ export default function Catalogo() {
               <div className="h-40 rounded-md overflow-hidden mb-4">
                 <img src={heroCacti} alt="Colección de cactus" className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-lg font-serif font-bold text-foreground mb-2">Propagación Legal</h3>
+              <h3 className="text-lg font-raleway font-bold text-foreground mb-2">Propagación Legal</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Todas nuestras plantas cuentan con respaldo legal de SEMARNAT bajo el registro
                 SEMARNAT-UMA-IN-0061-GTO, garantizando su origen ético y legal.

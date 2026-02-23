@@ -40,7 +40,7 @@ export default function QuienesSomos() {
             </div>
 
             <div>
-              <h2 className="text-3xl font-serif font-semibold text-foreground mb-4">Visión</h2>
+              <h2 className="text-3xl font-raleway font-semibold text-foreground mb-4">Visión</h2>
               <p className="text-muted-foreground leading-relaxed text-justify">
                 Construir un modelo de producción sostenible en zonas áridas que sirva de
                 referente nacional e internacional. Aspiramos a demostrar que la conservación
