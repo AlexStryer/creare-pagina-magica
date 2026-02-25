@@ -33,9 +33,9 @@ const impactos = [
 ];
 
 const contactInfo = [
-  { label: "Instagram", value: "@uma_dehesanisidro" },
+  { label: "Instagram", value: "@uma_dehesasanisidro" },
   { label: "Email", value: "ventas@dehesasanisidro.com" },
-  { label: "Teléfono", value: "55 4352 9753" },
+  { label: "Teléfono", value: "+52 1 446 113 9695" },
   { label: "Registro SEMARNAT", value: "SEMARNAT-UMA-IN-0061-GTO" },
 ];
 
