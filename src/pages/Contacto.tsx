@@ -37,7 +37,7 @@ export default function Contacto() {
               Unidad de Manejo para la Conservación de la Vida Silvestre, certificada por SEMARNAT.
             </p>
             <a
-              href="https://wa.me/5543529753"
+              href="https://wa.me/5214461139695"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 bg-whatsapp text-primary-foreground px-6 py-3 rounded-full font-semibold hover:brightness-110 transition-all"

@@ -372,7 +372,7 @@ export default function Home() {
               ))}
 
               <a
-                href="https://wa.me/5543529753"
+                href="https://wa.me/5214461139695"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center gap-3 bg-whatsapp text-white px-8 py-4 rounded-full font-semibold hover:brightness-110 transition-all shadow-lg hover:shadow-xl"

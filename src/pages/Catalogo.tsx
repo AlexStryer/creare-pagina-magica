@@ -71,7 +71,7 @@ export default function Catalogo() {
 
           <div className="mt-8 text-center">
             <a
-              href="https://wa.me/5543529753"
+              href="https://wa.me/5214461139695"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:brightness-110 transition-all"
